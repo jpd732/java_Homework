@@ -27,8 +27,9 @@ public class LeapYear
         //Creating else statement for if the input year is not a leap year.
         else
         {
-            System.out.println(leapyear + " is not a leap year");
+            System.err.println(leapyear + " is not a leap year");
         }
+
 
 
     }
@@ -44,6 +45,7 @@ public static void main(String[] args)
 
             //Calling method using class object in order to execute the program of leap year.
         leap1.leap_year();
+
 
         }
 
