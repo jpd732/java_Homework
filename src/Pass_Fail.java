@@ -1,15 +1,16 @@
 //importing builtin Scanner
 import java.util.Scanner;
-//Creating a new java class
-public class Grades
 
+
+//Creating a new java class
+
+public class Pass_Fail
 {
     //Calling Scanner method to take input from user.
     Scanner scanner = new Scanner(System.in);
 
     //Creating new method to calculate total and grade of the student.
-    public void Student_Grade()
-    {
+    public void pass1_fail1() {
         //Printing sout to take user input for student name.
         System.out.println("Please enter student name: ");
         String name = scanner.nextLine();
@@ -32,7 +33,7 @@ public class Grades
 
 
         //Creating variable Total to store total addition of 3 subjects.
-        int Total = Math+Science+English;
+        int Total = Math + Science + English;
         System.out.println("Total of three subjects is: " + Total);
 
         //Creating variable Total to store percentage.
@@ -40,46 +41,26 @@ public class Grades
         System.out.println("Percentage is: " + percentage);
 
 
-        //Creating if else statement in order to check grade according to percentage.
-        if (percentage >= 80.00 )
-        {
-            System.out.println("Grade is: A+");
+        //Creating if else statement in order to check that student has passed each subject individually.
+        if (Math >= 35 && Science >= 35 && English >= 35) {
             System.out.println(name + " has passed the exam");
+        } else {
+            System.err.println(name + " is failed because he did not pass in all three individual subjects.");
         }
-        else if (percentage >= 60.00 && percentage < 80.00)
-        {
-            System.out.println("Grade is A");
-            System.out.println(name + " has passed the exam");
-        }
-        else if (percentage >= 50.00 && percentage < 60.00)
-        {
-            System.out.println("Grade is B");
-            System.out.println(name + " has passed the exam");
-        }
-        else if (percentage >= 35.00 && percentage < 50.00)
-        {
-            System.out.println("Grade is C");
-            System.out.println(name + "has passed the exam");
-        }
-        else
-        {
-            System.err.println(name + " is failed");
-        }
+
+
+
 
     }
-
-    public static void main(String[] args)
+    //Main method for execution of program
+    public static void main (String[]args)
     {
         //Creating class object to call non-static method in static main method.
-        Grades grade = new Grades();
+        Pass_Fail pass_fail = new Pass_Fail();
 
         //Calling method using class object in order to execute the program of leap year.
-        grade.Student_Grade();
+        pass_fail.pass1_fail1();
 
 
     }
-
-
-
-
 }
